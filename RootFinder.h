@@ -279,9 +279,9 @@ namespace Numeric {
 			//
 			Eval const& a = this->_interval.aval();
 			Eval const& b = this->_interval.bval();
-			double test = (a.x - e.x) * (a.x - d.x) * (a.x - b.x) *
-				          (b.x - e.x) * (b.x - d.x) *
-						  (d.x - e.x);
+			double test = (a.fx - e.fx) * (a.fx - d.fx) * (a.fx - b.fx) *
+				          (b.fx - e.fx) * (b.fx - d.fx) *
+						  (d.fx - e.fx);
 
 			if (test == 0) {
 				return this->_interval.interp_quadratic(k, d);
